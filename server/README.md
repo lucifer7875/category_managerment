@@ -6,6 +6,9 @@
 # Run Project
   - npm run dev
 
+# Test Case run
+  - npm test
+
 ## Getting started
 
 To make it easy for you to get started with Github, here's a list of recommended next steps.
