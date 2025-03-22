@@ -115,6 +115,7 @@ export default class CONSTANTS {
     CATEGORY_ALREADY_EXISTS: "Category already exists",
     CATEGORY_INVALID: "Category is invalid",
     CATEGORY_EXIST: "Category already exists",
+    INVALID_FILE_TYPE: "Invalid file type",
     
   };
 }

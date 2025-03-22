@@ -1,6 +1,10 @@
 # SERVER
 
+# Install Depandancies
+ - npm install
 
+# Run Project
+  - npm run dev
 
 ## Getting started
 

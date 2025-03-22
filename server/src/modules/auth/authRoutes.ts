@@ -6,7 +6,7 @@ const router: Router = Router();
 const authController = new AuthController();
 
 router.get('/test', authController.test);
-router.post('/sign-up', authController.signup);
+router.post('/register', authController.signup);
 router.post('/login', authController.login);
 router.post('/send-verification-link', authController.sendVerificationLink);
 router.post('/forgot-password', IsTokenValid, authController.forgotPassword);

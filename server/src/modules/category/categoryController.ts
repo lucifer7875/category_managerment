@@ -41,6 +41,21 @@ export default class CategoryController {
         }
     }
     /**
+     * Get category tree
+     * @param req 
+     * @param res
+     * @returns
+     * @description Get category tree
+     */
+    public getCategoryTree = async (req: Request, res: Response) => {
+        try {
+            const categories = await this.categoryService.getCategoryTree();
+            return this.responseBuilder.responseContent(res, OK, true, CATEGORY_FETCHED_SUCCESSFULLY, categories);
+        } catch (error) {
+            return this.responseBuilder.responseContent(res, INTERNAL_SERVER_ERROR_CODE, false, INTERNAL_SERVER);
+        }
+    }
+    /**
      * Get category by id
      * @param req 
      * @param res
@@ -51,7 +66,7 @@ export default class CategoryController {
         try {
             const { id } = req.params;
             const category = await this.categoryService.getCategoryById(id);
-            return this.responseBuilder.responseContent(res, OK, true, CATEGORY_FETCHED_SUCCESSFULLY, category);
+            return this.responseBuilder.responseContent(res, OK, true, CATEGORY_FETCHED_SUCCESSFULLY, category[0]);
         } catch (error) {
             return this.responseBuilder.responseContent(res, INTERNAL_SERVER_ERROR_CODE, false, CATEGORY_NOT_FOUND);
         }

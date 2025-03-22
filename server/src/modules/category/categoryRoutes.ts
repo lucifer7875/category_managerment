@@ -9,6 +9,7 @@ const categoryController = new CategoryController();
 const v: Validator = new Validator();
 
 router.get('/', IsTokenValid, categoryController.getCategories);
+router.get('/tree', IsTokenValid, categoryController.getCategoryTree);
 router.get('/:id', IsTokenValid, categoryController.getCategoryById);
 router.post('/', v.validate(CreateCategoryValidator) ,IsTokenValid, categoryController.createCategory);
 router.put('/:id',v.validate(UpdateCategoryValidator), IsTokenValid, categoryController.updateCategory);
