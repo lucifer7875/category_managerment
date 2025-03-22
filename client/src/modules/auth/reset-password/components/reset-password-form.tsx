@@ -29,6 +29,11 @@ function ResetPasswordForm() {
         },
     });
 
+    /**
+     * @function onSubmit
+     * @description This function is used to submit the reset password form
+     * @param {z.infer<typeof resetPasswordSchema>} data - The data to submit the reset password form
+     */
     const onSubmit = (data: z.infer<typeof resetPasswordSchema>) => {
         const payload = {
             password: data.password,
@@ -42,6 +47,11 @@ function ResetPasswordForm() {
         });
     };
 
+    /**
+     * @function ResetPasswordForm
+     * @description This function is used to render the reset password form
+     * @returns Reset password form component
+     */
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>

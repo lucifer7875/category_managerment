@@ -47,6 +47,11 @@ function RegisterForm() {
         });
     };
 
+    /**
+     * @function RegisterForm
+     * @description This function is used to render the register form
+     * @returns Register form component
+     */
     return (
         <div>
             <div className="flex flex-col gap-4">

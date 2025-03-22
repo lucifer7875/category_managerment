@@ -46,6 +46,13 @@ export default class AuthController {
     return this.responseBuilder.responseContent(res, OK, true, "This is a test routing!");
   };
 
+  /**
+   * Signup
+   * @param req 
+   * @param res
+   * @returns
+   * @description Signup
+   */
   public signup = async (req: Request | any, res: Response) => {
     try {
       const { body } = req;
@@ -63,6 +70,14 @@ export default class AuthController {
       return this.responseBuilder.responseContent(res, INTERNAL_SERVER_ERROR_CODE, false, INTERNAL_SERVER);
     }
   };
+
+  /**
+   * Login
+   * @param req 
+   * @param res
+   * @returns
+   * @description Login
+   */
   public login = async (req: Request | any, res: Response) => {
 
     try {
@@ -101,6 +116,13 @@ export default class AuthController {
     }
   };
 
+  /**
+   * Send verification link
+   * @param req 
+   * @param res
+   * @returns
+   * @description Send verification link
+   */
   public sendVerificationLink = async (req: Request, res: Response) => {
     try {
       const { email, path: pathName } = req.body;
@@ -127,6 +149,13 @@ export default class AuthController {
     }
   };
 
+  /**
+   * Forgot password
+   * @param req 
+   * @param res
+   * @returns
+   * @description Forgot password
+   */
   public forgotPassword = async (req: Request, res: Response) => {
     try {
       const { password } = req.body;

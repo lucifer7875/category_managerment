@@ -1,6 +1,6 @@
 import { Router } from "express";
 import authRoute from "../modules/auth/authRoutes";
-// import { IsTokenValid } from "../middleware/isTokenValidMiddleware";
+import categoryRoute from "../modules/category/categoryRoutes";
 
 export default class Routes {
   private router: Router;
@@ -9,6 +9,7 @@ export default class Routes {
   }
   public path() {
     this.router.use("/auth", authRoute);
+    this.router.use("/category", categoryRoute);
 
 
 

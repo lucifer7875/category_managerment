@@ -29,6 +29,11 @@ function ForgotPasswordForm() {
 
     const [forgotPassword] = useForgotPasswordMutation();
 
+    /**
+     * @function onSubmit
+     * @description This function is used to submit the forgot password form
+     * @param {z.infer<typeof forgotPasswordSchema>} data - The data to submit the forgot password form
+     */
     const onSubmit = (data: z.infer<typeof forgotPasswordSchema>) => {
         const payload = {
             path: "auth/reset-password",
@@ -45,6 +50,11 @@ function ForgotPasswordForm() {
         });
     };
 
+    /**
+     * @function ForgotPasswordForm
+     * @description This function is used to render the forgot password form
+     * @returns Forgot password form component
+     */
     return (
         <div>
             <div className="flex flex-col gap-4">
