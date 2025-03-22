@@ -43,7 +43,7 @@ export default class AuthController {
   }
 
   public test = (req: Request | any, res: Response) => {
-    res.send("This is a test routing!");
+    return this.responseBuilder.responseContent(res, OK, true, "This is a test routing!");
   };
 
   public signup = async (req: Request | any, res: Response) => {

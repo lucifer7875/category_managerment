@@ -47,10 +47,6 @@ export default class CONSTANTS {
       'Your device limit is reached please logout in onther device and after try to login',
 
     EMAIL_INVALID: 'Invalid email.',
-    PROJECT_NAME_INVALID: 'Invalid project name',
-    PROGRAM_NAME_INVALID: 'Invalid program name',
-    IMG_SUCCESS: 'Image upload Successfully',
-    VIDEO_SUCCESS: 'Video upload Successfully',
     INACTIVE_USER: 'Inactive user.',
     INACTIVE_ROLE: 'Inactive role.',
     USER_NOT_EXISTS: 'User does not exist.',
